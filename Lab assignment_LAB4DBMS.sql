@@ -200,7 +200,7 @@ CASE
 WHEN report.Average=5 THEN 'Excellent Service'
  WHEN report.Average >4 THEN 'Good Service'
  WHEN report.Average >2 THEN 'Average Service'
- ELSE 'Poor Service’
+ ELSE 'Poor Service'
 END AS Type_of_Service from 
 (select final.supp_id, supplier.supp_name, final.Average from
 (select test2.supp_id, sum(test2.rat_ratstars)/count(test2.rat_ratstars) as Average from
